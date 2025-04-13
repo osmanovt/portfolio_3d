@@ -3,6 +3,7 @@ import Button from '../components/Button.jsx';
 import HeroExperience from '../components/HeroModels/HeroExperience.jsx';
 import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
+import AnimatedCounter from '../components/AnimatedCounter.jsx';
 
 function Hero () {
   useGSAP(() => {
@@ -29,7 +30,7 @@ function Hero () {
                   <span className="wrapper">
                     {words.map((word) => (
                       <span
-                        key={word.text}
+                        key={word.index}
                         className="flex items-center md:gap-3 gap-1 pb-2"
                       >
                         <img
@@ -59,11 +60,12 @@ function Hero () {
           </div>
         </header>
         <figure>
-          <div className="hero-3d-layout border-red-200 border-2">
+          <div className="hero-3d-layout">
             <HeroExperience/>
           </div>
         </figure>
       </div>
+      <AnimatedCounter />
     </section>
   );
 }

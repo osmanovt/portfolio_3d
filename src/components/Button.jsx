@@ -1,8 +1,22 @@
 import React from 'react';
 
 function Button ({text, className, id}) {
+  const buttonHandler = (e) => {
+    e.preventDefault();
+
+    const target = document.getElementById('counter')
+
+    if(target && id) {
+      const offset = window.innerHeight * 0.15;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({top, behavior: 'smooth'})
+    }
+  }
+
   return (
-    <a className={`${className ?? ''} cta-wrapper`} id={id}>
+    <a
+      onClick={buttonHandler}
+      className={`${className ?? ''} cta-wrapper`} id={id}>
       <div className="cta-button group">
         <div className="bg-circle" />
         <p className="text">{text}</p>
