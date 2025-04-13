@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Button ({text, className, id}) {
-  const buttonHandler = (e) => {
+  const handlerButton = (e) => {
     e.preventDefault();
 
     const target = document.getElementById('counter')
@@ -15,7 +15,7 @@ function Button ({text, className, id}) {
 
   return (
     <a
-      onClick={buttonHandler}
+      onClick={handlerButton}
       className={`${className ?? ''} cta-wrapper`} id={id}>
       <div className="cta-button group">
         <div className="bg-circle" />
