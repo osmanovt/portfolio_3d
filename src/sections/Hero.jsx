@@ -1,8 +1,16 @@
 import { words } from '../constants/index.js';
 import Button from '../components/Button.jsx';
+import HeroExperience from '../components/HeroModels/HeroExperience.jsx';
+import { useGSAP } from '@gsap/react';
+import { gsap } from 'gsap';
 
 function Hero () {
-
+  useGSAP(() => {
+    gsap.fromTo('.hero-text h1',
+      { y: 50, opacity: 0 },
+      { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: 'power2.inOut' },
+    );
+  });
 
   return (
     <section id="hero" className="relative overflow-hidden">
@@ -38,8 +46,10 @@ function Hero () {
               <h1>into Real Projects</h1>
               <h1>that Deliver Results</h1>
             </div>
-            <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-              Hi, I'm Tural, a developer based in Russia with a passion for code.
+            <p
+              className="text-white-50 md:text-xl relative z-10 pointer-events-none">
+              Hi, I'm Tural, a developer based in Russia with a passion for
+              code.
             </p>
             <Button
               className="md:w-80 md:h-16 w-60 h-12"
@@ -48,6 +58,11 @@ function Hero () {
             />
           </div>
         </header>
+        <figure>
+          <div className="hero-3d-layout border-red-200 border-2">
+            <HeroExperience/>
+          </div>
+        </figure>
       </div>
     </section>
   );
