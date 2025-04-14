@@ -11,7 +11,7 @@ function TestimonialsSection () {
           title="What People Say About Me?"
           sub="👥 Client Feedback Highlights"
         />
-        <div className="lg:colums-3 md:columns-2 columns-1 mt-16">
+        <div className="lg:columns-3 md:columns-2 columns-1 mt-16">
           {testimonials.map(({name, imgPath, mentions, review}) => (
             <GlowCard card={{review}}>
               <div  className="flex items-center gap-3">
