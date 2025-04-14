@@ -13,7 +13,7 @@ function TestimonialsSection () {
         />
         <div className="lg:columns-3 md:columns-2 columns-1 mt-16">
           {testimonials.map(({name, imgPath, mentions, review}) => (
-            <GlowCard card={{review}}>
+            <GlowCard key={mentions} card={{review}}>
               <div  className="flex items-center gap-3">
                 <div>
                   <img src={imgPath} alt={name}/>

@@ -10,7 +10,6 @@ function TechIcon ({ icon }) {
     if (icon.name === 'Interactive Developer') {
       scene.scene.traverse((child) => {
         if (child.isMesh && child.name === 'Object_5') {
-          console.log('========', child.name);
           child.material = new THREE.MeshStandardMaterial({ color: 'white' });
         }
       });
