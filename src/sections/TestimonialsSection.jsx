@@ -3,7 +3,7 @@ import { testimonials } from '../constants/index.js';
 import GlowCard from '../components/GlowCard.jsx';
 import TitleHeader from '../components/TitleHeader.jsx';
 
-function TestimonialSection () {
+function TestimonialsSection () {
   return (
     <section id="testimonials" className="flex-center section-padding">
       <div className="w-full h-full md:px-10 px-5">
@@ -31,4 +31,4 @@ function TestimonialSection () {
   );
 }
 
-export default TestimonialSection;
+export default TestimonialsSection;
